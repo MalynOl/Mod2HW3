@@ -9,6 +9,7 @@ namespace HomeWork7
     internal class Starter
     {
         private CatalogAnimals _catalogAnimals;
+
         private IFindService _findService;
         private ISortBySquareHouseService _sortBySquareHouseService;
         private ICountMinSquareForZooService _squareForZooService;
@@ -17,10 +18,6 @@ namespace HomeWork7
         public Starter()
         {
             _catalogAnimals = new CatalogAnimals();
-            _findService = new FindService();
-            _sortBySquareHouseService = new SortBySquareHouseService();
-            _squareForZooService = new CountMinSquareForZooService();
-            _notificationService = new NotificationService();
             AllAnimals = _catalogAnimals.GetAnimals();
             MinAgeAnimal = 1;
             ClimateZonesSubTropical = ClimateZones.Subtropical;
