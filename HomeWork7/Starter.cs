@@ -19,6 +19,10 @@ namespace HomeWork7
         {
             _catalogAnimals = new CatalogAnimals();
             AllAnimals = _catalogAnimals.GetAnimals();
+            _findService = new FindService();
+            _sortBySquareHouseService = new SortBySquareHouseService();
+            _squareForZooService = new CountMinSquareForZooService();
+            _notificationService = new NotificationService();
             MinAgeAnimal = 1;
             ClimateZonesSubTropical = ClimateZones.Subtropical;
         }
