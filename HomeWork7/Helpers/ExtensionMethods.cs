@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HomeWork7
+﻿namespace HomeWork7
 {
-    public static class ExtensionMethod
+    public static class ExtensionMethods
     {
         public static T[] FindAnimalByAgeAndClimate<T>(this T[] array, double age, ClimateZones climateZone)
            where T : AnimalChordal

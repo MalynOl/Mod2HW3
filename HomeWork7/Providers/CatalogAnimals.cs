@@ -23,6 +23,7 @@
                 color: "grey",
                 numberKgMeet: 5,
                 numberInPack: 10);
+
             Wolf wolfRed = new Wolf(
                 id: 10121,
                 name: "Armin",
@@ -35,6 +36,7 @@
                 color: "red",
                 numberKgMeet: 3,
                 numberInPack: 6);
+
             Wolf wolfPolar = new Wolf(
                 id: 10123,
                 name: "Arct",
@@ -47,6 +49,7 @@
                 color: "white",
                 numberKgMeet: 9,
                 numberInPack: 12);
+
             Lion lionAfric1 = new Lion(
                 id: 0909,
                 name: "Lucky",
@@ -59,6 +62,7 @@
                 color: "brown-orange",
                 numberKgMeet: 7,
                 volumePurr: 1);
+
             Lion lionAfric2 = new Lion(
                 id: 0909,
                 name: "Lusy",
@@ -71,6 +75,7 @@
                 color: "brown-orange",
                 numberKgMeet: 5,
                 volumePurr: 1);
+
             Elephant elephantAfric = new Elephant(
                 id: 00076,
                 name: "Teodor",
@@ -82,6 +87,7 @@
                 climate: new ClimateZones[2] { ClimateZones.Subtropical, ClimateZones.Tropical },
                 color: "grey",
                 lengthProboscis: 1.2);
+
             Chimpanzee chimpanzeeAfric1 = new Chimpanzee(
                 id: 0123,
                 name: "Micky",
@@ -93,6 +99,7 @@
                 climate: new ClimateZones[2] { ClimateZones.Subtropical, ClimateZones.Tropical },
                 color: "black",
                 isWalkingOnTwo: true);
+
             Chimpanzee chimpanzeeAfric2 = new Chimpanzee(
                 id: 01231,
                 name: "Mocky",
@@ -104,6 +111,7 @@
                 climate: new ClimateZones[2] { ClimateZones.Subtropical, ClimateZones.Tropical },
                 color: "black",
                 isWalkingOnTwo: true);
+
             Flamingo flamingoAfric1 = new Flamingo(
                 id: 0099,
                 name: "Flamingo1",
@@ -114,6 +122,7 @@
                 gender: true,
                 climate: new ClimateZones[2] { ClimateZones.Subtropical, ClimateZones.Tropical },
                 color: "pink");
+
             Flamingo flamingoAfric2 = new Flamingo(
                 id: 009912,
                 name: "Flamingo2",
@@ -135,6 +144,7 @@
                 gender: false,
                 climate: new ClimateZones[2] { ClimateZones.Subtropical, ClimateZones.Tropical },
                 color: "pink");
+
             AnimalChordal[] animals = new AnimalChordal[]
             {
                 wolfGreyGeneral, wolfRed, wolfPolar, elephantAfric, chimpanzeeAfric1, chimpanzeeAfric2, flamingoAfric1, flamingoAfric2, flamingoAfric3, lionAfric1, lionAfric2

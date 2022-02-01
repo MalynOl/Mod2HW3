@@ -32,9 +32,11 @@
             NotificationService.WriteText("Животные старше 1 года, обитающие в субтропическом климате: ");
             var animalsOverTwoYearsAndTropicalClimateZone = FindService.FindAnimalByAgeAndClimate(AllAnimals, MinAgeAnimal, ClimateZonesSubTropical);
             NotificationService.WriteAnimals(animalsOverTwoYearsAndTropicalClimateZone);
+
             NotificationService.WriteText("Эти животные, отсортированные по минимальной площади вальера: ");
             var animalsSortBySquareHouse = SortBySquareHouseService.SortBySquareHouse(animalsOverTwoYearsAndTropicalClimateZone);
             NotificationService.WriteAnimals(animalsSortBySquareHouse);
+
             NotificationService.WriteText("Минимальная общая площадь вальеров: ");
             var minSquareForZoo = SquareForZooService.CountMinSquareForZoo(animalsSortBySquareHouse);
             NotificationService.WriteNumber(minSquareForZoo);
