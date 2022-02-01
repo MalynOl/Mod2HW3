@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HomeWork7
+﻿namespace HomeWork7
 {
-    internal class CountMinSquareForZooService : ICountMinSquareForZooService
+    internal class CountService : ICountService
     {
         public double CountMinSquareForZoo(AnimalChordal[] animalChordals)
         {

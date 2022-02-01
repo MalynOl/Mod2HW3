@@ -1,28 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HomeWork7
+﻿namespace HomeWork7
 {
     internal class Starter
     {
-        private CatalogAnimals _catalogAnimals;
-
-        private IFindService _findService;
-        private ISortBySquareHouseService _sortBySquareHouseService;
-        private ICountMinSquareForZooService _squareForZooService;
-        private INotificationService _notificationService;
-
-        public Starter()
+        public Starter(IGetCatalogAnimals getCatalog, IFindService findService, ISortService sortService, ICountService countService, INotificationService notificationService)
         {
-            _catalogAnimals = new CatalogAnimals();
-            AllAnimals = _catalogAnimals.GetAnimals();
-            _findService = new FindService();
-            _sortBySquareHouseService = new SortBySquareHouseService();
-            _squareForZooService = new CountMinSquareForZooService();
-            _notificationService = new NotificationService();
+            CatalogAnimals = getCatalog;
+            AllAnimals = CatalogAnimals.GetAnimals();
+
+            FindService = findService;
+            SortBySquareHouseService = sortService;
+            SquareForZooService = countService;
+            NotificationService = notificationService;
+
             MinAgeAnimal = 1;
             ClimateZonesSubTropical = ClimateZones.Subtropical;
         }
@@ -30,17 +19,25 @@ namespace HomeWork7
         public AnimalChordal[] AllAnimals { get; }
         public double MinAgeAnimal { get; init; }
         public ClimateZones ClimateZonesSubTropical { get; init; }
+
+        private IGetCatalogAnimals CatalogAnimals { get; set; }
+
+        private IFindService FindService { get; set; }
+        private ISortService SortBySquareHouseService { get; set; }
+        private ICountService SquareForZooService { get; set; }
+        private INotificationService NotificationService { get; set; }
+
         public void Start()
         {
-            _notificationService.WriteText("Животные старше 1 года, обитающие в субтропическом климате: ");
-            var animalsOverTwoYearsAndTropicalClimateZone = _findService.FindAnimalByAgeAndClimate(AllAnimals, MinAgeAnimal, ClimateZonesSubTropical);
-            _notificationService.WriteAnimals(animalsOverTwoYearsAndTropicalClimateZone);
-            _notificationService.WriteText("Эти животные, отсортированные по минимальной площади вальера: ");
-            var animalsSortBySquareHouse = _sortBySquareHouseService.SortBySquareHouse(animalsOverTwoYearsAndTropicalClimateZone);
-            _notificationService.WriteAnimals(animalsSortBySquareHouse);
-            _notificationService.WriteText("Минимальная общая площадь вальеров: ");
-            var minSquareForZoo = _squareForZooService.CountMinSquareForZoo(animalsSortBySquareHouse);
-            _notificationService.WriteNumber(minSquareForZoo);
+            NotificationService.WriteText("Животные старше 1 года, обитающие в субтропическом климате: ");
+            var animalsOverTwoYearsAndTropicalClimateZone = FindService.FindAnimalByAgeAndClimate(AllAnimals, MinAgeAnimal, ClimateZonesSubTropical);
+            NotificationService.WriteAnimals(animalsOverTwoYearsAndTropicalClimateZone);
+            NotificationService.WriteText("Эти животные, отсортированные по минимальной площади вальера: ");
+            var animalsSortBySquareHouse = SortBySquareHouseService.SortBySquareHouse(animalsOverTwoYearsAndTropicalClimateZone);
+            NotificationService.WriteAnimals(animalsSortBySquareHouse);
+            NotificationService.WriteText("Минимальная общая площадь вальеров: ");
+            var minSquareForZoo = SquareForZooService.CountMinSquareForZoo(animalsSortBySquareHouse);
+            NotificationService.WriteNumber(minSquareForZoo);
         }
     }
 }

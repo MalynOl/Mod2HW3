@@ -11,7 +11,5 @@ namespace HomeWork7
         double MaxDistance { get; set; }
 
         string Jump();
-
-        // double CalculateLengthCage( double coefficient);
     }
 }

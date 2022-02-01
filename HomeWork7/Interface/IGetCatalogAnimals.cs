@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace HomeWork7
 {
-    internal interface ISortBySquareHouseService
+    internal interface IGetCatalogAnimals
     {
-        public AnimalChordal[] SortBySquareHouse(AnimalChordal[] allAnimals);
+        public AnimalChordal[] AllAnimals { get; set; }
+
+        public AnimalChordal[] GetAnimals();
     }
 }

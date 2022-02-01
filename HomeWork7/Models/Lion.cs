@@ -8,10 +8,9 @@ namespace HomeWork7
 {
     internal class Lion : Felids, ISwimmable, IJumping
     {
-        private int _classificationNumberForLion;
-
-        public Lion(string name, double squareHouse, double length, double age, bool isFly, bool gender, ClimateZones[] climate, string color, double numberKgMeet, int volumePurr) : base(color)
+        public Lion(int id, string name, double squareHouse, double length, double age, bool isFly, bool gender, ClimateZones[] climate, string color, double numberKgMeet, int volumePurr) : base(color)
         {
+            ClassificationNumberForLion = id;
             NameAnimal = name;
             MinSquareHouse = squareHouse;
             LengthAnimal = length;
@@ -27,6 +26,8 @@ namespace HomeWork7
         public bool IsNeedWaterForLive { get; set; }
 
         public double MaxDistance { get; set; }
+
+        private int ClassificationNumberForLion { get; set; }
 
         public string Jump() => "Lion can jump";
 

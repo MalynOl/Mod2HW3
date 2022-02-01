@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HomeWork7
+﻿namespace HomeWork7
 {
     internal class Elephant : Proboscideans, ISwimmable
     {
-        private int _classificationNumberForElephant;
-
-        public Elephant(string name, double squareHouse, double length, double age, bool isFly, bool gender, ClimateZones[] climate, string color, double lengthProboscis) : base(color)
+        public Elephant(int id, string name, double squareHouse, double length, double age, bool isFly, bool gender, ClimateZones[] climate, string color, double lengthProboscis) : base(color)
         {
+            ClassificationNumberForElephant = id;
             NameAnimal = name;
             MinSquareHouse = squareHouse;
             LengthAnimal = length;
@@ -23,8 +16,9 @@ namespace HomeWork7
             LengthProboscis = lengthProboscis;
         }
 
-        // public int MinSquareHouse { get; set; }
         public bool IsNeedWaterForLive { get; set; }
+
+        private int ClassificationNumberForElephant { get; set; }
 
         public string Swim() => "Elephant can swim";
 

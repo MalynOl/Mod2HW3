@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HomeWork7
+﻿namespace HomeWork7
 {
     internal class Wolf : Canines, IJumping, ISwimmable
     {
-        private int _classificationNumberForWolf;
-
         public Wolf(
-            string name, double squareHouse, double length, double age, bool isFly, bool gender, ClimateZones[] climate, string color, double numberKgMeet, int numberInPack) : base(color)
+            int id, string name, double squareHouse, double length, double age, bool isFly, bool gender, ClimateZones[] climate, string color, double numberKgMeet, int numberInPack) : base(color)
         {
+            ClassificationNumberForWolf = id;
             NameAnimal = name;
             MinSquareHouse = squareHouse;
             LengthAnimal = length;
@@ -28,6 +21,8 @@ namespace HomeWork7
         public bool IsNeedWaterForLive { get; set; }
 
         public double MaxDistance { get; set; }
+
+        private int ClassificationNumberForWolf { get; set; }
 
         public string Jump() => "Wolf can jump";
 

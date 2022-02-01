@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HomeWork7
+﻿namespace HomeWork7
 {
     internal abstract class Auk : AnimalChordal// птицы
     {
-        protected Auk(string color) // base (name, square, length, age, isFly, gender, climateZones)
+        protected Auk(string color)
         {
             FeathersColor = color;
         }

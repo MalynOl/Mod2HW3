@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HomeWork7
+﻿namespace HomeWork7
 {
     internal class Flamingo : Auk, IJumping, IFlyable, ISwimmable
     {
-        private int _classificationNumberForFlamingo;
-
-        public Flamingo(string name, double squareHouse, double length, double age, bool isFly, bool gender, ClimateZones[] climate, string color)
+        public Flamingo(int id, string name, double squareHouse, double length, double age, bool isFly, bool gender, ClimateZones[] climate, string color)
             : base(color)
         {
+            ClassificationNumberForFlamingo = id;
             NameAnimal = name;
             MinSquareHouse = squareHouse;
             LengthAnimal = length;
@@ -27,8 +20,9 @@ namespace HomeWork7
 
         public bool IsNeedWaterForLive { get; set; }
 
-        // private string FeathersColor { get; set; }
         public double MaxDistance { get; set; }
+
+        private int ClassificationNumberForFlamingo { get; set; }
 
         public string Jump() => "Flamingo can jump";
 
