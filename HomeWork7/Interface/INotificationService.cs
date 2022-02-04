@@ -1,6 +1,6 @@
 ﻿namespace HomeWork7
 {
-    internal interface INotificationService
+    public interface INotificationService
     {
         public void WriteAnimals(AnimalChordal[] animalChordals);
 

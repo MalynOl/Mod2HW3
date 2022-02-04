@@ -1,6 +1,6 @@
 ﻿namespace HomeWork7
 {
-    internal interface ISortService
+    public interface ISortService
     {
         public AnimalChordal[] SortBySquareHouse(AnimalChordal[] allAnimals);
     }

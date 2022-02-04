@@ -1,6 +1,6 @@
 ﻿namespace HomeWork7
 {
-    internal class NotificationService : INotificationService
+    public class NotificationService : INotificationService
     {
         public void WriteAnimals(AnimalChordal[] animalChordals)
         {

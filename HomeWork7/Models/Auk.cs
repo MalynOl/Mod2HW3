@@ -1,6 +1,6 @@
 ﻿namespace HomeWork7
 {
-    internal abstract class Auk : AnimalChordal// птицы
+    public abstract class Auk : AnimalChordal// birds
     {
         protected Auk(string color)
         {

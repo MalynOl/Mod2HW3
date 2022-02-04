@@ -1,6 +1,6 @@
 ﻿namespace HomeWork7
 {
-    internal class FindService : IFindService
+    public class FindService : IFindService
     {
         public AnimalChordal[] FindAnimalByAgeAndClimate(AnimalChordal[] allAnimals, double age, ClimateZones climateZone)
         {

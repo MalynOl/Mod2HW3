@@ -2,9 +2,9 @@
 
 namespace HomeWork7
 {
-    internal class DependencyInjection
+    public class DependencyInjection
     {
-        public void SetDI()
+        public IContainer SetDI()
         {
             var builder = new ContainerBuilder();
             builder.RegisterType<CatalogAnimals>().As<IGetCatalogAnimals>();
@@ -15,9 +15,8 @@ namespace HomeWork7
             builder.RegisterType<Starter>();
 
             var container = builder.Build();
-            var starter = container.Resolve<Starter>();
 
-            starter.Start();
+            return container;
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace HomeWork7
 {
-    internal class Chimpanzee : Primates, IJumping
+    public class Chimpanzee : Primates, IJumping
     {
         public Chimpanzee(int id, string name, double squareHouse, double length, double age, bool isFly, bool gender, ClimateZones[] climate, string color, bool isWalkingOnTwo)
             : base(color)

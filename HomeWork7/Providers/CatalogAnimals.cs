@@ -1,6 +1,6 @@
 ﻿namespace HomeWork7
 {
-    internal class CatalogAnimals : IGetCatalogAnimals
+    public class CatalogAnimals : IGetCatalogAnimals
     {
         public CatalogAnimals()
         {

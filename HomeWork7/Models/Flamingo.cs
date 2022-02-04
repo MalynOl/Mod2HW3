@@ -1,6 +1,6 @@
 ﻿namespace HomeWork7
 {
-    internal class Flamingo : Auk, IJumping, IFlyable, ISwimmable
+    public class Flamingo : Auk, IJumping, IFlyable, ISwimmable
     {
         public Flamingo(int id, string name, double squareHouse, double length, double age, bool isFly, bool gender, ClimateZones[] climate, string color)
             : base(color)

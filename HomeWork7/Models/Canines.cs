@@ -1,6 +1,6 @@
 ﻿namespace HomeWork7
 {
-    internal abstract class Canines : Predaceous // псовые
+    public abstract class Canines : Predaceous // dogs
     {
         protected Canines(string color) : base(color)
         {

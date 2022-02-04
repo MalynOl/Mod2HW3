@@ -1,16 +1,21 @@
 ﻿namespace HomeWork7
 {
-    internal class Starter
+    public class Starter
     {
+        private IFindService _findService;
+        private ISortService _sortBySquareHouseService;
+        private ICountService _squareForZooService;
+        private INotificationService _notificationService;
+
         public Starter(IGetCatalogAnimals getCatalog, IFindService findService, ISortService sortService, ICountService countService, INotificationService notificationService)
         {
             CatalogAnimals = getCatalog;
             AllAnimals = CatalogAnimals.GetAnimals();
 
-            FindService = findService;
-            SortBySquareHouseService = sortService;
-            SquareForZooService = countService;
-            NotificationService = notificationService;
+            _findService = findService;
+            _sortBySquareHouseService = sortService;
+            _squareForZooService = countService;
+            _notificationService = notificationService;
 
             MinAgeAnimal = 1;
             ClimateZonesSubTropical = ClimateZones.Subtropical;
@@ -22,24 +27,19 @@
 
         private IGetCatalogAnimals CatalogAnimals { get; set; }
 
-        private IFindService FindService { get; set; }
-        private ISortService SortBySquareHouseService { get; set; }
-        private ICountService SquareForZooService { get; set; }
-        private INotificationService NotificationService { get; set; }
-
         public void Start()
         {
-            NotificationService.WriteText("Животные старше 1 года, обитающие в субтропическом климате: ");
-            var animalsOverTwoYearsAndTropicalClimateZone = FindService.FindAnimalByAgeAndClimate(AllAnimals, MinAgeAnimal, ClimateZonesSubTropical);
-            NotificationService.WriteAnimals(animalsOverTwoYearsAndTropicalClimateZone);
+            _notificationService.WriteText("Животные старше 1 года, обитающие в субтропическом климате: ");
+            var animalsOverTwoYearsAndTropicalClimateZone = _findService.FindAnimalByAgeAndClimate(AllAnimals, MinAgeAnimal, ClimateZonesSubTropical);
+            _notificationService.WriteAnimals(animalsOverTwoYearsAndTropicalClimateZone);
 
-            NotificationService.WriteText("Эти животные, отсортированные по минимальной площади вальера: ");
-            var animalsSortBySquareHouse = SortBySquareHouseService.SortBySquareHouse(animalsOverTwoYearsAndTropicalClimateZone);
-            NotificationService.WriteAnimals(animalsSortBySquareHouse);
+            _notificationService.WriteText("Эти животные, отсортированные по минимальной площади вальера: ");
+            var animalsSortBySquareHouse = _sortBySquareHouseService.SortBySquareHouse(animalsOverTwoYearsAndTropicalClimateZone);
+            _notificationService.WriteAnimals(animalsSortBySquareHouse);
 
-            NotificationService.WriteText("Минимальная общая площадь вальеров: ");
-            var minSquareForZoo = SquareForZooService.CountMinSquareForZoo(animalsSortBySquareHouse);
-            NotificationService.WriteNumber(minSquareForZoo);
+            _notificationService.WriteText("Минимальная общая площадь вальеров: ");
+            var minSquareForZoo = _squareForZooService.CountMinSquareForZoo(animalsSortBySquareHouse);
+            _notificationService.WriteNumber(minSquareForZoo);
         }
     }
 }

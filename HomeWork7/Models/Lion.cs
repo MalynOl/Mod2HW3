@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeWork7
 {
-    internal class Lion : Felids, ISwimmable, IJumping
+    public class Lion : Felids, ISwimmable, IJumping
     {
         public Lion(int id, string name, double squareHouse, double length, double age, bool isFly, bool gender, ClimateZones[] climate, string color, double numberKgMeet, int volumePurr) : base(color)
         {

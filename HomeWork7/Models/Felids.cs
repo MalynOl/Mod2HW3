@@ -1,6 +1,6 @@
 ﻿namespace HomeWork7
 {
-    internal abstract class Felids : Predaceous // кошачьи
+    public abstract class Felids : Predaceous // cats
     {
         protected Felids(string color) : base(color)
         {

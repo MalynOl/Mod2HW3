@@ -1,6 +1,6 @@
 ﻿namespace HomeWork7
 {
-    internal abstract class Predaceous : Mammal // хищные
+    public abstract class Predaceous : Mammal // wolf parent
     {
         protected Predaceous(string color) : base(color)
         {

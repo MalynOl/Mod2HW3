@@ -1,6 +1,6 @@
 ﻿namespace HomeWork7
 {
-    internal class SortService : ISortService
+    public class SortService : ISortService
     {
         public AnimalChordal[] SortBySquareHouse(AnimalChordal[] allAnimals)
         {

@@ -1,6 +1,6 @@
 ﻿namespace HomeWork7
 {
-    internal class Wolf : Canines, IJumping, ISwimmable
+    public class Wolf : Canines, IJumping, ISwimmable
     {
         public Wolf(
             int id, string name, double squareHouse, double length, double age, bool isFly, bool gender, ClimateZones[] climate, string color, double numberKgMeet, int numberInPack) : base(color)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeWork7
 {
-    internal interface IJumping
+    public interface IJumping
     {
         double MaxDistance { get; set; }
 

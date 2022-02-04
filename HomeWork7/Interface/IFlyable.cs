@@ -1,6 +1,6 @@
 ﻿namespace HomeWork7
 {
-    internal interface IFlyable
+    public interface IFlyable
     {
         double MaxWingspan { get; set; }
 

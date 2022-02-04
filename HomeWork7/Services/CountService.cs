@@ -1,6 +1,6 @@
 ﻿namespace HomeWork7
 {
-    internal class CountService : ICountService
+    public class CountService : ICountService
     {
         public double CountMinSquareForZoo(AnimalChordal[] animalChordals)
         {

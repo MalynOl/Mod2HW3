@@ -1,6 +1,6 @@
 ﻿namespace HomeWork7
 {
-    internal abstract class Primates : Mammal
+    public abstract class Primates : Mammal
     {
         protected Primates(string color) : base(color)
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeWork7
 {
-    internal interface IGetCatalogAnimals
+    public interface IGetCatalogAnimals
     {
         public AnimalChordal[] AllAnimals { get; set; }
 

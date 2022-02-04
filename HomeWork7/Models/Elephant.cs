@@ -1,6 +1,6 @@
 ﻿namespace HomeWork7
 {
-    internal class Elephant : Proboscideans, ISwimmable
+    public class Elephant : Proboscideans, ISwimmable
     {
         public Elephant(int id, string name, double squareHouse, double length, double age, bool isFly, bool gender, ClimateZones[] climate, string color, double lengthProboscis) : base(color)
         {

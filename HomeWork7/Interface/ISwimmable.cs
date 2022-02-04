@@ -1,6 +1,6 @@
 ﻿namespace HomeWork7
 {
-    internal interface ISwimmable
+    public interface ISwimmable
     {
         bool IsNeedWaterForLive { get; set; }
 

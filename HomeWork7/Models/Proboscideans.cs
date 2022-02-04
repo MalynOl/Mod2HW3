@@ -1,6 +1,6 @@
 ﻿namespace HomeWork7
 {
-    internal abstract class Proboscideans : Mammal // хоботные
+    public abstract class Proboscideans : Mammal // elephant parent
     {
         protected Proboscideans(string color) : base(color)
         {
